@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YELLOW MOON: REVENGE RUN</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="game-header">
+        <div>
+          <p class="eyebrow">THE RYOKAN SWORD RUN</p>
+          <h1>旅館・月影</h1>
+        </div>
+        <div class="header-actions">
+          <span id="stage-label" class="stage-label">STAGE 1</span>
+          <button id="restart-button" class="restart-button" type="button">最初から</button>
+        </div>
+      </header>
+
+      <section class="game-card" aria-label="横スクロールアクションゲーム">
+        <div class="hud">
+          <span>コイン <strong id="coin-count">0</strong> / 10</span>
+          <span>ゴールまで <strong id="distance">100%</strong></span>
+          <span>体力 <strong id="health-count">♥♥♥</strong></span>
+        </div>
+        <canvas id="game-canvas" width="960" height="540">
+          お使いのブラウザはCanvasに対応していません。
+        </canvas>
+        <div id="message" class="message" aria-live="polite">
+          <strong>冒険をはじめよう！</strong>
+          <span>← → / A D で移動、スペースでジャンプ</span>
+        </div>
+        <button id="next-stage-button" class="next-stage-button" type="button" hidden>次のステージへ →</button>
+        <div id="gameover-overlay" class="gameover-overlay" hidden>
+          <div class="gameover-panel">
+            <p class="eyebrow">THE JOURNEY ENDS HERE</p>
+            <h2>GAME OVER</h2>
+            <p>刀を手に、もう一度旅館を駆け抜けよう</p>
+            <button id="gameover-restart" class="restart-button" type="button">最初からやり直す</button>
+          </div>
+        </div>
+        <div id="start-overlay" class="gameover-overlay">
+          <div class="gameover-panel">
+            <p class="eyebrow">THE RYOKAN SWORD RUN</p>
+            <h2>旅館・月影</h2>
+            <p>黄色いジャージの剣士となり、白無垢の花嫁を目指せ</p>
+            <button id="start-button" class="restart-button" type="button">最初からプレイ</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="controls">
+        <span><kbd>←</kbd><kbd>→</kbd> 移動</span>
+        <span><kbd>SPACE</kbd> 2段ジャンプ</span>
+        <span><kbd>X</kbd> 刀で斬る</span>
+        <span class="tip">黒服の追手を全員倒し、白無垢の花嫁へ</span>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
